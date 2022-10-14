@@ -1,0 +1,278 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Carvajal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_BoolLoginCarvajal" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>788,2976</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_Carvajal" sap:VirtualizedContainerService.HintSize="798,2911" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Delta Carvajal" sap:VirtualizedContainerService.HintSize="756,2819" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,2603" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Usuario'" sap:VirtualizedContainerService.HintSize="680,1101" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Timeout="60" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,885" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Usuario'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/index.php" DesignTimeRectangle="530, 601, 306, 34" ElementType="InputBox" FriendlyName="'INPUT inp_usuario'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control inp_control' aaname=' Usuario' /&gt;" Guid="e3c47bbe-123b-454a-bd35-113852de00eb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATYAAAAmCAYAAABOHbeGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANkSURBVHhe7drtatNQAMZxL8bb8YMfdiPegxdxaFiQQUaQ6UbRlkHBQmRacVKdFFYmGzJ8qVII5kPGxuNJc7ql696E1drj/wcPy1ly0n56OCfpnW/DoQghxKdQbIQQ73JabPce1HT3/kNCCFnIFB02VWwXXUgIIYuUS4sNABYNxQbAOxQbAO9QbAC8Q7EB8A7FBsA7FBsA71BsALxz68W2tLTkjv4RR5nS7NgNAPwPZlJsxtTVc+Oq3jMj8+yiM7PTb9rPrDXUd2MA/vO+2LL9jtqvD5S5MQD/zbfYTnJlaaosd+ObcvPSX5dMHJ3PlJ+48Xnj+WxRAS/NrdjyvZaimlHwKFS4HCh83hutqgYvo3Orup7qxqju/jX82DidF9i/YbOcVyjuH73YUuOR/Rw7p7Hr7hclGrhr0t3K5wb2uqilPss5wCtzKrahtlaN1t6NG+VYmVs9XVdsg/cd9dPyWFlX67VAm3vlcHT/Wqzk8GwlNlFsw47iWqT26fnMzgllHnfsNwLgizkVW67uhj1e3VTvS2Zr7cx1xTZpoCQ6O1fcP2wdlAOnWmzDV/Z4dWuyxL4lWjGxOuOyBLDwZlZsO1PPt2yZPbVl1nTvJ7Ov2m6tacVuC00QqeX2g9cWW3pYziu2km47Wi226OV401mqFtv0va3viSITKfnuxgAW3kyKLTZ2e3j+9xW5Lahlo/jN+aXRsQZv121BlT/JuLLY8r4aYaj6h9St8qZXbFcV22jFVnneNvK5rdCsq/unLzAA/LNmUmz9ZigTrinZGyg7Olb245PasV2ZhZv65FZyw8NDpeNV3X5L4bI9Zw/TN7HMSksHR+WpdHfTbhVdeY1WV5US+rmtdVuWNy228hmbLcaPrlxPUu3UA5mNrl1PAvDFTIqtKIx+KxptE4u3k0XCx+2zh/5K1WvawqkF5XayshXVyVdtFSVozwXLgeJ2V+3VcXkNtP3ElmZQbkPj5o46tsxuXGxWtp9orXhrGtj72++3spHogLeigFdmU2wV+a8rfk9WeRs6Jc8nXipMuOocgP/ezIsNAP42ig2Ad2692ABg3ig2AN6h2AB4h2ID4B2KDYB3KDYA3qHYAHiHYgPgnWuLjRBCFjVTxXbvQe3CCwkhZBFSdNhUsRFCiC+h2AghnmWo3wmZ8jA1aHroAAAAAElFTkSuQmCC" InformativeScreenshot="f9c399c99c4e31d21892298f0776c51e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="530, 575, 68, 21" ElementType="Text" FriendlyName="'Usuario'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname=' Usuario' check:innerText='Usuario' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAZCAYAAACSP2gVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARESURBVFhH7ZhtS2JpGMf3IwpyIM6LhFUoYc4ynBhGsH3hgA2GkMOkZBGC2yANh0KsmG2QzUE5EloiiYSRM2TSCtJH+O91nvQ83J5TLAPL5os/nO7rfvzd18Odv/z9+Ii5ZmsOyENzQB5yBzQeoT9itL8gMQH1L4tYexWAz8+r4pbiyMlDR7+XICegZh6hBR6L0TwOml20mqfYey+A8y8jVXt5kGyAutj7jTwm8Rf6lvYhKh+X4QvsQh6b2206J7jhdRzcMmy3x4iFBWyfM2w/Ww91pJeCCH9qs+0usgK6O8UqhVTym6nN0LUEwS8gd8WwGaplKSSj2O8xbL0iRJo7VWPYfrZUQAGEchdsu4usgG5dDqEeMIh0k2Ez9F8F9C9kC7E2tkM8+C0n6c7nKHwLG/jyYG236DmAxj9QkfJYi77F6ocCSld6frurYy8joXKn92O1jW9Q/pSlsQIiiQLKpvX6soTUSZcuu4pcIobITp3SBaWIQhZ75kIzmUNZn/LtJTu/OpJ0nw656A9AyFTRuh9h8HADWVpX20TpxtLXoScDGlFOC4KL5FFud9E4k7D2TkJLyW9qP9sc5rZRHakA7e9DEaWzKg4yb8EtxFH6rvXtSHSRr+NYfSXSwbNIHV5g8HiD/Tf8dP/3NEeIQu69pM5RPtqFwLPP5wCkqPd1U61kRpn3LQiISW1b4mboyYBog/TNzHVegJS/LYWii1yYx+qJ5gEqIL9oy5VWQPJOEL43RXQmdtL5Lng/gTZ7LskJaDRE/26IwYgeid0LyF36pg0NqK3vFl6KnuNBGaqKPN1y7hjy9cjWzwOQoQdlr23kXk8Pr3mQZD28BZD2LXy2ecu4iuRkf1NNAd23sa++dwyvCVLJFlQt8lNv4lby1vxglluluyogZEvynVoR6Xeiuib3+7F2KE9AQzSONiH+uozQShzJDH0HbIDs3sEAZPSfSvPqGYBoUIReznwM27Uu3UoX8lEBqQzFMCl3VEejN0SnWUSMyqUvNOM9NL5Amja7uONM8q0/RIKeRYU1jsBOAHgAGpQ3wAU2Ub437NYDewMa4UuCLuRj3WQnqWs4L1cDpMafPW5n6Du9lSg/GTFvV+8kTh5BSXSLkrwSlgS7UtCT/KFxa0PIf1bRMWCpgPT4H9NN0vxigSqRYqNqU0pSOOqAeocEIJxHQx/bvyxAVPo/GRBBlpVCFMW2Ubn0NbiIfZwOSJ00XEDLZmRLW4zL2G7ApN63XXJ70/9ygSjSZwYckrKhBIWWGsa0McpFya8/JnalkhpFgltax/7lKeUH3auUCkRezAUo/JcEiLk6ylvBZwFSZN2jUtGKaEy8cqopIDpEUg8pd2kx7wZoIiXhu/0aoPxaQE8Jpo00cLVpxYNle5aoGDHbdWkhRreSXtES8pO0soHStXOy/6P0JD3XLM0BeWgOyENzQB6aA/LQHJCrHvEPZWQSZKPVq04AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_Config["UserCarvajal"].ToString()</mca:CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.Text>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/index.php" DesignTimeRectangle="530, 677, 306, 34" ElementType="InputBoxPassword" FriendlyName="'INPUT inp_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control inp_control' aaname=' Contraseña' /&gt;" Guid="ccf81529-f56a-4a29-b9d4-2267df992750" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATYAAAAmCAYAAABOHbeGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASdSURBVHhe7Zpta9tIFIX3//8DYRERVBREcOogjEMWl4ZV1o0anLpx8bImpm4xODWJqKg+2Ik5e0caO2rjl+xWiRvteeC0lUbSyF+e3juj3y7DEAzDMEUKxcYwTOEyF9vp6SnDMMyzzkKxXV9fMwzDPMssFdvNzQ2m0ynDMMyzinLXUrGpCwgh5Lmh3EWxEUIKBcVGCCkcFBshpHBQbISQwkGxEUIKx6OK7TaOEH0b6yNCCHkaHkFsMfonHhzTgGHolGxUjnuIcikAYwz/6iPSR0/KdIjGrglzp4b2RYDKyyZCPUQI+XXIWWwxOlVLROagdj5EPJFT0zHCTwE820XjS3rVz9GBZ3jy5waIOgg6orKoh6BeR+tSnyeE/FLkK7buIUzDxtFnfbwKEV4cSasa3+oTCxjHiKIY4+xrXDXgLBXbbfLMRKiK2RyL2uGJenbm2iyL5s2ydDydX42t+FWEkEcmV7F1D6TtfNnCulW16O86nJIBc9uCpVpWp45urAe/+HC2PPhHLswtGd+ScauClur5unWYct+8xdWCGx07MKo+Gm563nkTIvxQm8+h7rEOOlJPpozOyrBKJqxkfhPOn8N0YBqiVbVhmnJe3Sd/1zr6rlXvJcQffZS3ZT5L/ya3geG//H+BEJIPuYrNd0Qgrwf6aAlhAFda1aPBrKbR7etukK5XKYEYFirvZqtXMZp7Iozfe+lhMv59xZaIrSQS+nC38jZ6H6A7O4xbqIjIDi/UQRc1ubb+MRlJqzpt4uQ5O/6dkKKm3CfyUuNr3mt8EaA5+03TAY5sA+7bjawEEvK/58nFFr5R8mh8v+h+6cM2XATKA8vEVdVnlo3vNecV2X1Gybt5yU2pdKz9AP0wW1um19gHTbTP2zoBPKnCkvvWvdcPdKpSOR6P9BEh5CnJVWxJK+rqymsJC2WQSMOBrzYX/qvYfnxmNECzXoat2k3djqZiE6668KtO2tbaFQTJJkAPh9Jeuq9mUrtL/6sMr5t3MkLn2IObmY9iI2Qz5Cq2h2weJBWb40t9lOHzESwj2/L9pNjG0m5aFrzzSC/iZyu2DNMIvbrcm1SQEYJdEdvJEi2vnHeExo6I7I/BfEOBFRshmyNfsc3Wy0p2+rmHElXyuUcTtRcGyu+kWUzW2EQ6s/UwkUvbM2Hs602HB4ktleDtOG0l74ktc03CVRMVqcZSscUYfhrNdy3js3KyvqfeJnzrwrA8tGdLYxMR31k7XXNb+V7qExTrTuhxH3URKcVGyGbIWWyCqoKOK7CzH+iaDryT/nwNbLaDaJhm0rLZ+z76s8F1YpsO4Ut1lDx3u4bOtwVikwqquSeC1bub7kEbgVRQidjGAzTmYzL/dlm3oooYffXu8k6mJbItmXDk3nCt2MbovZJ/651W9Xtarx2KjZANkb/Yskzixd+J5cDt5AFfiklFt/SqzG5obkzGy799I4Q8GY8rNkII2QAUGyGkcFBshJDCQbERQgoHxUYIKRwUGyGkcFBshJDCQbERQgoHxUYIKRwUGyGkcFBshJDCQbERQgrHSrExDMM859wTG8MwTFFCsTEMU7CE+AfSx2/KXPE+twAAAABJRU5ErkJggg==" InformativeScreenshot="a21aadde5b71986854cc8ae3507a6b44.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="530, 650, 94, 21" ElementType="Text" FriendlyName="'Contraseña'" FullSelectorArgument="&lt;webctrl aaname=' Contraseña' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Contraseña' tag='LABEL' type='' class='' check:innerText='Contraseña' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAZCAYAAADKQPsMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVtSURBVGhD7VjvS2JpFN4/MRgE8UNCCeUHlzCGBBvYAl0aZGzIZJwhhGiRFmkJLcqQrcHBPjQ1yIqEMTZkMQnSn/Ds877X+8tef1SzmwP3w0P2/jrvPc85zzn3/nJ7dwcHzw+HiBGBQ8SIYHgi2i00rlvqOQdPxkAiGmc7iIUm4XrhwZiAexL+pW2cXKnXO3gc+hJR3X2NcZ2AbngWsHmu3ufg4ehNRH0bQbfd+a7QOo5qFzjJxzWCXm6jqtqr46qCrXcRBPwB+ARmI3i/X0OjrVj7M6P9DcU/Unifr/DZ+DtTwBfVuj7oSUT5w6SNBIHYR33+AhszYmwSq5/t+3Q0PqXgI5Gu2TjS+RKKhyVspSPwezj2toSmYs+jIAJmUED8x2gW4wis7DDowvC4vfClT5Xr+qEHEd+wGbKTIOB5U9KiuZZFsDMWzF7c339ZwDxJGF85RqN7rn2B6teusaegnILrmYn4EXgQESqoiJDZ5F1DeRgJEvK1lsD87AKiyQyKdevcMTaSTPP2DeVwHdEw16ztGI1CvVJC7kMYY/4EtphxxcMK6hz/spvCRvlGNhqriwuY36512ZrD/DvzHAlKylFW2ODc2wxy/9yYc0T1MIPlpQWEllJIH5rP3ChnsbzL8+XZcYTC8Y5EmXtF8AnpioYD3N/1jB30lKbiG7Xj7VBJ0wU2X1J+ksdd4wqcizrkRYBOEdKVy7ymnE1j+VPHCUJ2aGN8ag6xbIFrdrA84zVqU7W4Lju6MW8YsWQKy4I0jh+t8G6vIliYCJNcaneRjhO2PAHMp4WtAjYi0xjz6cHS4h52hqyBxUoNJ4dZRBezDAAxd8O5abhmUshVmM2VgryDHoDVLAPBO836l8DmPoMhn0KAamAEaOsYy14+49tt5IQ8J+fgckeQuxRnm1ASUT/oFONB+JWXvbefhjmnlCwbbpD7jXJH+bLWi3p+Qcsm8b8kIoD3Z+b87XkWgRdhbHaiSjqiS5okEe449q7NMQlrlH7/G1EjkLQ7mzXQgs9r1P2usyjNfncKRzxP2vev48RydvXPOfudrHbvakj7PZjftWfcPSKGJsFNZyjbV82Q58OggtXj4a2OlkSYTpfoGutJBOuZsacLzWvK1lWBRHiYfWKMGZFkhniCMmPK5+aLqxbxesbpYNPRuYPKvmpM4ruwW0GajU53oNqIGI4EL/yLTOGeBbeFvRjlQ5ktVmhEaI6wwOropxDBTDP2CIi2UnRtE5QR6rjmTLv96qdt1pSgfHl1vdqRZ8rzZzKsJ8KJdjT1jOhLhKhvCQSFXbbvsSR/e/sQ0ZcEX4oFxjRuPUAJpvM4CYvu29NPR7Ml/mqZc0/C2Pa6XlAKvvP3DyTiSybIdVlUjfv3CAQBZqVhQ9ynI0P31hGDiBCtrcubQNGQNq2GKolosgVUkxBHbljn28AClwzQodMIpQs46ZDYqLEL+p3js9olq3+FeUna0B0t0jbkxTgLvawbQxBR5xl6h9a41IhXEXGUZJZGCkY7Xd3XAk8j4gZlFlqDJEkEC6roqtqnWPWJVryEeme+eV5COnsqzxpEhLyfpYY0zjLyRVlJhNx4jwTC0ymaj0T1cI1pSAfo5+nfqYzoYNpm4/IlT1sjOijzgYch4vaSRZeOEvtdU8xcnq2UJnZNIfEyOcE3/KkgovljbLJZkES0L5BboiTxfj4/OyTWitjBN3Pv1xJWLd/bXKwZqx+1+UFE3F4z86a83CPsBhBMH6P4bnJYIroe/qkY5stt62lfdptDfhluXvVZN+ienH+4OmgQDUK/vZKIxkFC+xZkIIE95+vq/wqjWDt4XjhEjAgcIkYEDhEjAoeIEYFDxEjgDv8CQr3eYNcPBDkAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_Config["PasswordCarvajal"].ToString()</mca:CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.Text>
+                  </uix:NTypeInto>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:30:00" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+                    <ui:MessageBox.Text>
+                      <InArgument x:TypeArguments="x:Object">
+                        <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Slucione el CAPTCHA para poder cotinuar con la ejecución"</mca:CSharpValue>
+                      </InArgument>
+                    </ui:MessageBox.Text>
+                  </ui:MessageBox>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Ingresar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/index.php" DesignTimeRectangle="343, 611, 68, 31" ElementType="Button" FriendlyName="'Ingresar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary' aaname='Ingresar' check:innerText='Ingresar' /&gt;" Guid="8a5014ef-d8ee-4feb-ade9-06892269349c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAjCAYAAAA33kzeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMLSURBVGhD7ZlLSxtRGIb7i7rJpn/CP+AvyKaBLqS02bnrQrJyZy2oSOOiWoqEUlqmRaEMQRJkiFSbpubCdBhMnJDLRIa375lLHZ2pY8HYhJzFg2fOzXMevu+bwDz41W5D8nekoASuCFp49RmpJ5t4+HhjZhH3Fx4igkTno6dvkHq2i9TzwuzC+wsPgaQ/goS5mZcTIDzQxxVBbnjFTZ5RhA8p6AakoASkoASkoASkoASkoATuTtAHHdVaHdm4sSnm7gQVu8DARC5ubIoZsyAF6c0SMsvhPrJcRHbrAOmla/2CJRULW0XM+89zKwfIbqqYC88h82ulaL+77+XaMGL+wooS6U9iPIJEu9NFdTBC82wEOCOUFe9wGY7Z9hBVvQtz4MAesF0+9NaY5ziy2XfRx8fVQxRMti3uYwxh9c6RXxP/q4gd3e/n3nZHxyL78g22uW+z4wAXXey4cytQeYajxpB7OrBqJ5fnvSXjE2SfY92PkIw2BPQ62xrU3ghqwV/zqQ3bEP3+GlDMa09kutyHbbaQEWP+HnbtG1IbOkyHsvx+DwXZ7UM/chTkW4B1rLEtBPEojR+xUXUbxiconG7i2RWhulHRPCgxNXgpjRJ4+Mh6smPQl8NIERHlRhWf3T0q2LPYHvRR1k6wGErf+TUNL9UW9gxGy/eKO1cIqhYv5/wr9yyINaVgwrSYMjbTr9bCi6AOXRekM+MqJW8sAmtb4Sf2dKbvhYhUirAcmA0DBfUE+dPR9ArK8+JWS0f+PYvsVqiAX1uTDp4Dgcsacm9F+u0jHRTbpRaaYL35Gl67j/XG1EaQgtxxH6bBAssiLYqvzQKu7sasYeFdr3nF1U0xppT6pYjUOx1NFnerw3341zyuYG61jipT0Dpj4efLQT3tT6Cg27Bt8FJhCQprEi+ghuZMGPcrKHhF9/peBFmsFXy7BW+qSeSeBXm4P/7C9WeC+S+CpgkpKAEpKAEpKAEpKAEpKIGIIPllNUTcl1X5bd6H94/9Nh9IEuZEeM0q4v6BnIggSRQp6Eba+A2OL2R5m3TuRwAAAABJRU5ErkJggg==" InformativeScreenshot="25f7d8f6e82588a0bc18e0a02ebac3c0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,115" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="Throw_1">
+                    <InArgument x:TypeArguments="s:Exception">
+                      <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">new BusinessRuleException("fallo el inicio de sesión a Carvajal, validar que los accesos esten vigentes o que sean validos.")</mca:CSharpValue>
+                    </InArgument>
+                  </Throw>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/index.php" DesignTimeRectangle="530, 601, 306, 34" ElementType="InputBox" FriendlyName="'INPUT inp_usuario'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control inp_control' aaname=' Usuario' /&gt;" Guid="4b93a2a2-ff40-459e-9f7d-163186b139ea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATYAAAAmCAYAAABOHbeGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANkSURBVHhe7drtatNQAMZxL8bb8YMfdiPegxdxaFiQQUaQ6UbRlkHBQmRacVKdFFYmGzJ8qVII5kPGxuNJc7ql696E1drj/wcPy1ly0n56OCfpnW/DoQghxKdQbIQQ73JabPce1HT3/kNCCFnIFB02VWwXXUgIIYuUS4sNABYNxQbAOxQbAO9QbAC8Q7EB8A7FBsA7FBsA71BsALxz68W2tLTkjv4RR5nS7NgNAPwPZlJsxtTVc+Oq3jMj8+yiM7PTb9rPrDXUd2MA/vO+2LL9jtqvD5S5MQD/zbfYTnJlaaosd+ObcvPSX5dMHJ3PlJ+48Xnj+WxRAS/NrdjyvZaimlHwKFS4HCh83hutqgYvo3Orup7qxqju/jX82DidF9i/YbOcVyjuH73YUuOR/Rw7p7Hr7hclGrhr0t3K5wb2uqilPss5wCtzKrahtlaN1t6NG+VYmVs9XVdsg/cd9dPyWFlX67VAm3vlcHT/Wqzk8GwlNlFsw47iWqT26fnMzgllHnfsNwLgizkVW67uhj1e3VTvS2Zr7cx1xTZpoCQ6O1fcP2wdlAOnWmzDV/Z4dWuyxL4lWjGxOuOyBLDwZlZsO1PPt2yZPbVl1nTvJ7Ov2m6tacVuC00QqeX2g9cWW3pYziu2km47Wi226OV401mqFtv0va3viSITKfnuxgAW3kyKLTZ2e3j+9xW5Lahlo/jN+aXRsQZv121BlT/JuLLY8r4aYaj6h9St8qZXbFcV22jFVnneNvK5rdCsq/unLzAA/LNmUmz9ZigTrinZGyg7Olb245PasV2ZhZv65FZyw8NDpeNV3X5L4bI9Zw/TN7HMSksHR+WpdHfTbhVdeY1WV5US+rmtdVuWNy228hmbLcaPrlxPUu3UA5mNrl1PAvDFTIqtKIx+KxptE4u3k0XCx+2zh/5K1WvawqkF5XayshXVyVdtFSVozwXLgeJ2V+3VcXkNtP3ElmZQbkPj5o46tsxuXGxWtp9orXhrGtj72++3spHogLeigFdmU2wV+a8rfk9WeRs6Jc8nXipMuOocgP/ezIsNAP42ig2Ad2692ABg3ig2AN6h2AB4h2ID4B2KDYB3KDYA3qHYAHiHYgPgnWuLjRBCFjVTxXbvQe3CCwkhZBFSdNhUsRFCiC+h2AghnmWo3wmZ8jA1aHroAAAAAElFTkSuQmCC" InformativeScreenshot="824e2baca965b127812d2c7f3037d739.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="530, 575, 68, 21" ElementType="Text" FriendlyName="'Usuario'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname=' Usuario' check:innerText='Usuario' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAZCAYAAACSP2gVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARESURBVFhH7ZhtS2JpGMf3IwpyIM6LhFUoYc4ynBhGsH3hgA2GkMOkZBGC2yANh0KsmG2QzUE5EloiiYSRM2TSCtJH+O91nvQ83J5TLAPL5os/nO7rfvzd18Odv/z9+Ii5ZmsOyENzQB5yBzQeoT9itL8gMQH1L4tYexWAz8+r4pbiyMlDR7+XICegZh6hBR6L0TwOml20mqfYey+A8y8jVXt5kGyAutj7jTwm8Rf6lvYhKh+X4QvsQh6b2206J7jhdRzcMmy3x4iFBWyfM2w/Ww91pJeCCH9qs+0usgK6O8UqhVTym6nN0LUEwS8gd8WwGaplKSSj2O8xbL0iRJo7VWPYfrZUQAGEchdsu4usgG5dDqEeMIh0k2Ez9F8F9C9kC7E2tkM8+C0n6c7nKHwLG/jyYG236DmAxj9QkfJYi77F6ocCSld6frurYy8joXKn92O1jW9Q/pSlsQIiiQLKpvX6soTUSZcuu4pcIobITp3SBaWIQhZ75kIzmUNZn/LtJTu/OpJ0nw656A9AyFTRuh9h8HADWVpX20TpxtLXoScDGlFOC4KL5FFud9E4k7D2TkJLyW9qP9sc5rZRHakA7e9DEaWzKg4yb8EtxFH6rvXtSHSRr+NYfSXSwbNIHV5g8HiD/Tf8dP/3NEeIQu69pM5RPtqFwLPP5wCkqPd1U61kRpn3LQiISW1b4mboyYBog/TNzHVegJS/LYWii1yYx+qJ5gEqIL9oy5VWQPJOEL43RXQmdtL5Lng/gTZ7LskJaDRE/26IwYgeid0LyF36pg0NqK3vFl6KnuNBGaqKPN1y7hjy9cjWzwOQoQdlr23kXk8Pr3mQZD28BZD2LXy2ecu4iuRkf1NNAd23sa++dwyvCVLJFlQt8lNv4lby1vxglluluyogZEvynVoR6Xeiuib3+7F2KE9AQzSONiH+uozQShzJDH0HbIDs3sEAZPSfSvPqGYBoUIReznwM27Uu3UoX8lEBqQzFMCl3VEejN0SnWUSMyqUvNOM9NL5Amja7uONM8q0/RIKeRYU1jsBOAHgAGpQ3wAU2Ub437NYDewMa4UuCLuRj3WQnqWs4L1cDpMafPW5n6Du9lSg/GTFvV+8kTh5BSXSLkrwSlgS7UtCT/KFxa0PIf1bRMWCpgPT4H9NN0vxigSqRYqNqU0pSOOqAeocEIJxHQx/bvyxAVPo/GRBBlpVCFMW2Ubn0NbiIfZwOSJ00XEDLZmRLW4zL2G7ApN63XXJ70/9ygSjSZwYckrKhBIWWGsa0McpFya8/JnalkhpFgltax/7lKeUH3auUCkRezAUo/JcEiLk6ylvBZwFSZN2jUtGKaEy8cqopIDpEUg8pd2kx7wZoIiXhu/0aoPxaQE8Jpo00cLVpxYNle5aoGDHbdWkhRreSXtES8pO0soHStXOy/6P0JD3XLM0BeWgOyENzQB6aA/LQHJCrHvEPZWQSZKPVq04AAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Continuar'" sap:VirtualizedContainerService.HintSize="680,917" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,701" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Adeinco'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/admin.php" DesignTimeRectangle="478, 440, 414, 18" ElementType="Text" FriendlyName="'Adeinco'" FullSelectorArgument="&lt;webctrl aria-role='textbox' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='textbox' tag='SPAN' type='' class='select2-selection__rendered' aaname='Adeinco' check:innerText='Adeinco' /&gt;" Guid="9a9ee3a3-7b7e-4f96-9756-93a0f18d7868" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaIAAAAWCAYAAACCJ5i4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVHhe7doxjoJAGEDhvaQX8AJ4AGtra2vO4Dk8gq2ddnazecSf/AwYrXay5H0JWRhmKOcF3J8iSVJDhkiS1JQhkiQ1ZYgkSU0ZIklSU4ZIktTUYohOp1M5HA7l+Xy+RuYul0vZ7Xblfr+/RuZYz3OYK0nSklmIrtfrEA8Ozt/5JkSSJH0yC9H5fB4P3owywrTdbstmsxnu5RARJsY54m0qvxGxdr/fD9cxL78p5WfHeiw9V5K0HpMQsckfj8chCgSGjT9Cw1/CQ6CQQ8T8ruuGvxEf7tchIjR5fYSFZxAp5sQ95sUa1ufnSpLWYxIiNn5CxKYPNv14a+EesYgw5WuiEVEBa7h+PB6TEEWs8hzW5POsHufaz4GStC6TEBGU+AwWR7yB1BGoQ1SvY+7tdpuEKIcsR6YOWajH62dIkv6/MURs7sSDQATG2PgJQB2BOkRLn8wIyDchyudZPc61b0SStC5jiJY2+QgJocnnIDwxn8jkz27cY279ae5diJbWc3Dtb0SStG5jiGLzrxGeHJz4z7a+74cw5LDkz3KMRzw+hSiuY/0345KkdZj8RiRJ0l8zRJKkpgyRJKkpQyRJasoQSZKaMkSSpKYMkSSpoVJ+AfjzOndCweKPAAAAAElFTkSuQmCC" InformativeScreenshot="c8f5c75d7e73077a49d0ac1daff5327a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Text="ADEINCO[k(enter)]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/admin.php" DesignTimeRectangle="478, 468, 426, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' class='select2-search__field' aaname='' /&gt;" Guid="ab2f4d67-5393-42f7-9318-00753fa411cb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAa4AAAAiCAYAAAAH8D2NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE5SURBVHhe7dhbasJQGIXRTjLzH0CtoIKKkZyySxIi9E3anB/Wgg25nPeP5KMBQCHCBUApL+Eax2c7Xa7tcDy3zy8zM7P9lhalSWnT1hquvMih2/3RpmmanwLAPtKiNClt2sZrDVeqlgMA0JO0KY1arOFK0XxpAdCbtCmNWqzhyv9EAOjRtlHCBUD3hAuAUt4O1zAM8xUA/D3hAqAU4QKgFOECoBThAqAU4QKgFOECoBThAqAU4QKgFOECoBThAqAU4QKgFOECoBThAqAU4QKglLfDBQD/SbgAKEW4ACjl13Adjuc2TdN8BwB9SJvSqMUartPl2m73x3wHAH1Im9KoxRqucXz+FC0HfHkBsLe0KE1Km9KoxRquyItULYfyP9HMzGyvpUVp0jZa8RIuAOidcAFQinABUEhr3x+Ux48FAypXAAAAAElFTkSuQmCC" InformativeScreenshot="f8c74cf1e4b090a7aa7f194358363bf7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Continuar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/admin.php" DesignTimeRectangle="652, 588, 91, 39" ElementType="Button" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-success btn-round' aaname='Continuar' check:text='Continuar' /&gt;" Guid="c42cba7e-88c2-4116-9595-9e63f87b7661" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAArCAYAAAAe/1QiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAONSURBVHhe7ZrPahRBEId9CEEvIuhDePId9CQKInr0IB58Ab16UYnmLLmunhchBxEPQg4RPUQwURSCAUMkgUhQaPlialLbU7Pzp3uyq1s/+LE7XT29Xd/0zPT0zrHgmpgc/gSVBH/z53YYrLwKt148CecX7oSz8zfCyUdXwvEHl/5Lkxs5kis5kzsMuqoT/OHaUrgwuBtOPLwczsxfNzs6CyZ3GMACJm3VCv7i5+VihFudmWXLGQGjpmoMn9Ps9ONr5g+7Dw0jWDVRLfyPW+vh3NPb4dTcVfPH3GXDCmawG6ex8Jc3Vv0Sk2DYwbBKlfA5ag4+3TCsOgMq4XPaWI252xuWlkz43DD8Gp/PsLRuwiX4TJV8VpPfMI2noSX4zFWtnd3phq3WCHye0vwm259hq5+ER+DzmGzt5M5nGIsK+CwQsU5h7eDOZxjLYlwBnxW6HItkN4dzYWdv96DVv1p4v2jW7eKXX96Flc2vxTbf9fa0G8awRgV8pkJW5TYGMtKw778ZhL3fv/ah6bpdHcP/Fy3TzgJ+6ixHRrw1yikjRh1dV6QPDN8//fgW1nc2D6KHcT5FxC8+uzcy8vl8u7E20rb0x+of7Uk7bMtAEfGdMonRL4xSBoDMegr4qbOcGHCVBYIAjbcFsEDiU0MgrhOP4cd1pU918AW8xCkjFselnymGNSrgp/4DpROx4mKrnj5wcTyGRnwcfB0DGPvyWQdfyrR1XLdl1W1jWKMCvlWpjesSEceAMAl9392eCvhST9QHfIyyjXw9eq24OAaEpwG+hk55HM8JvzTyU6/5VnJi3fEYLtYHLo4fFXzK4371Bb90zc+xpkMCSCdIZ7lRCRSBQGLWtk5Yx1Ph0x7tSlza1fDZppy45NIH/NJsJ8c8HwtsLX0wsCQuEvC4Dr60L6Cawtf7IsqHq0sjv8W+Isqff3i9X5/94rZSXJrn53rCdY+3+YTraztHY3NtB/mqZv82VzWRr+f3a9hWruejHLMet22Z5YhK8P0/3H7c6D9cxFTI317I58ZvL4j8vZ18bvXeDvI31vIYhq3fWEP+rmaaYdfpXU0RR43Txu8BzQ0rmFWNeFEtfBE3DJ8F1RtG1s3VUmP4iKkSc1W/FJUNE9jE08lxagVfxFMaj8msU8zyYhy5wwAW+sm1qTrBF7FAxAodp5mcEan/iE2zyU1GODmTuyySdVESfFeaHP7EFMIfJdnyX6ITUhUAAAAASUVORK5CYII=" InformativeScreenshot="5a470c61946a05c51558fadb31b25e27.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/admin.php" DesignTimeRectangle="652, 588, 91, 39" ElementType="Button" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-success btn-round' aaname='Continuar' check:text='Continuar' /&gt;" Guid="2b306426-154f-4f5c-95b8-cdff1e6e1417" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAArCAYAAAAe/1QiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAONSURBVHhe7ZrPahRBEId9B0EvIuhDePId9CQKInr0IB58Ar16UYnmLLmunhchBxEPQg4RPUQwURSCAUMkgUhQaPlialLbU7Pzp3uyq1s/+LE7XT29Xd/0zPT0zrHgmpgc/gSVBH/z53YYrLwKt148CecX7oSz8zfCyUdXwvEHl/5Lkxs5kis5kzsMuqoT/OHaUrgwuBtOPLwczsxfNzs6CyZ3GMACJm3VCv7i5+VihFudmWXLGQGjpmoMn9Ps9ONr5g+7Dw0jWDVRLfyPW+vh3NPb4dTcVfPH3GXDCmawG6ex8Jc3Vv0Sk2DYwbBKlfA5ag4+3TCsOgMq4XPaWI252xuWlkz43DD8Gp/PsLRuwiX4TJV8VpPfMI2noSX4zFWtnd3phq3WCHye0vwm259hq5+ER+DzmGzt5M5nGIsK+CwQsU5h7eDOZxjLYlwBnxW6HItkN4dzYWdv96DVv1p4v2jW7eKXX96Flc2vxTbf9fa0G8awRgV8pkJW5TYGMtKw778ZhL3fv/ah6bpdHcP/Fy3TzgJ+6ixHRrw1yikjRh1dV6QPDN8//fgW1nc2D6KHcT5FxC8+uzcy8vl8u7E20rb0x+of7Uk7bMtAEfGdMonRL4xSBoDMegr4qbOcGHCVBYIAjbcFsEDiU0MgrhOP4cd1pU918AW8xCkjFselnymGNSrgp/4DpROx4mKrnj5wcTyGRnwcfB0DGPvyWQdfyrR1XLdl1W1jWKMCvlWpjesSEceAMAl9392eCvhST9QHfIyyjXw9eq24OAaEpwG+hk55HM8JvzTyU6/5VnJi3fEYLtYHLo4fFXzK4371Bb90zc+xpkMCSCdIZ7lRCRSBQGLWtk5Yx1Ph0x7tSlza1fDZppy45NIH/NJsJ8c8HwtsLX0wsCQuEvC4Dr60L6Cawtf7IsqHq0sjv8W+Isqff3i9X5/94rZSXJrn53rCdY+3+YTraztHY3NtB/mqZv82VzWRr+f3a9hWruejHLMet22Z5YhK8P0/3H7c6D9cxFTI317I58ZvL4j8vZ18bvXeDvI31vIYhq3fWEP+rmaaYdfpXU0RR43Txu8BzQ0rmFWNeFEtfBE3DJ8F1RtG1s3VUmP4iKkSc1W/FJUNE9jE08lxagVfxFMaj8msU8zyYhy5wwAW+sm1qTrBF7FAxAodp5mcEan/iE2zyU1GODmTuyySdVESfFeaHP7EFMIf6wHbbcZXE1IAAAAASUVORK5CYII=" InformativeScreenshot="28e018b5f063cb6d96ea1123b1a1091b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Consultas'" sap:VirtualizedContainerService.HintSize="680,411" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="78abb82d-fb8d-48b4-9c0d-a68add31a430" Timeout="30" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="304,154" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">out_BoolLoginCarvajal</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_BoolLoginCarvajal</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/admin.php" DesignTimeRectangle="23, 242, 220, 41" ElementType="Text" FriendlyName="'Consultas'" FullSelectorArgument="&lt;webctrl parentid='consultas' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='consultas' tag='A' type='' class='anchor' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;  &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Consultas &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Consultas' /&gt;" Guid="0be7f783-f543-44d4-bc3e-ed93c8e50cd2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOAAAAAtCAYAAAC3W2eLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL5SURBVHhe7drBahNRGIbhXoqX4qV4J16BGxGqiyhVEEHcVEQRpQvpsiiK6E6pCC4KVaG0C+HIJ/nCn8PJyczE9l/0fSA0mTNnMovzdiZptwqANAQIJCJAIBEBAokIEEhEgEAiAgQSESCQiACBRAQIJCJAIBEBAokIEEhEgEAiAgQSbRTg59/Xy/7R1bL7fau8+nGlvD2+Vk7+fJmPAlhnUoCKTMEpvPqh7QpzqNPTs3L/0eNy49btxWPvzf58NMfxz19l++5Oef/x0+L89Bz43yYF6Pgc29HZXjk8ube4Guqhbet8PfxWbt6ZLQXnxf9k99l8y8UjQFyU0QHqNtORtXhccfZ4Ybeudgpze7bz76c4iNYVUqE+ff5yaTzGonFv1z46lugYen+dh8To/Pzg3Yelq7PfV/t4W31c/1Kp5wAtowP01U9XvBbdnjrQ3lWwjmwVx+CFXL9WYFrwPo62Owg9j5HF1/WYjxsD1HP/onDU+hnfz/vqPOK8OObXQG10gEPicqS9fbQotTi1SHvqUCTO1cLXw2LYrbk2NcAWnwPBYazRAfpzXi8uR9r7RjRG1FMHJopr9uDh2gAdhG4F41VLNg1Qx4q3mj4HHbfeBqwyOUD9bNGt6ZAAYyg9dWCiOUMCNEekKBz91AB1XIfnba1z1JhD1HsBLaMDjJ/x6j83xPj0ZUyPF3ZrccYA6lBE2x3SkACtd9yhAWpeHVsrQGudP2CjAxSF59D08Ge+etu6P0X4ahIj9OL3ovVr71O/7gVYL/4Yrp7H21Lt66vaugDjMT1P5xDnief6XIHapABFcbXCq/87Zl2EXrS+XWvdstX7xPFegA7A8+rPgZrnsRev9xah1SHFyOpjapvGtb/maY7HPA6sMjlA0y2pbj1jaPE2dUiEwGW1cYCrxAhXfWEDXHbnFqAoQsXHFRBoO9cAAfQRIJCIAIFEBAgkIkAgEQECiQgQSESAQCICBBIRIJCIAIFEBAgkIkAgEQECiQgQSESAQJpS/gJZFn1cJBZo7gAAAABJRU5ErkJggg==" InformativeScreenshot="72bc4e28e0dc729ff763bef0cdc68d14.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAbSURBVBhXY/izvezT0oYVOxgWnN65a+fFtE8AZscLYUQfwCoAAAAASUVORK5CYII=" InformativeScreenshot="67c791a245ef54948a34179c058e0bcf.png" Selector="&lt;html app='chrome.exe' title='Delta Carvajal' /&gt;" Url="https://tracking.carvajalcomunicacion.com/wdelta/hv2delta/Nfsend/web/appAdmin/index.php" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
